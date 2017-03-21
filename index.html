@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>basic 13</title>
+    <script type="text/javascript">
+    // Print 1-255
+    function one() {
+      for(var i=1; i<=255; i++){
+        console.log(i);
+      }
+    };
+    // one();
+
+
+    // Print Odds 1-255
+    function two(){
+      // for(var i=1; i<=255; i=i+2){
+      //   console.log(i);
+      // }
+
+      for(var i=0; i<=255; i++){
+        if(i%2){
+          console.log(i);
+        }
+      }
+    }
+    // two();
+
+    // Print Ints and Sum 0-255
+    function three(){
+      var sum = 0;
+      for(var i=0; i<=255; i++){
+        sum = sum + i;
+        console.log("int-> "+i+" sum-> "+sum);
+      }
+    }
+    // three();
+
+    // iterate thru array
+    function four(arr){
+      for(var i=0; i<arr.length; i++){
+        console.log(arr[i]);
+      }
+    }
+    // four([1,2,3333,4,5]);
+
+    // find max
+    function five(arr){
+      var max = arr[0];
+
+      for(var i=1; i<arr.length; i++){
+        if(arr[i]>max){
+          max = arr[i];
+        }
+      }
+      console.log(max);
+    }
+    // five([1, 55, 2, 67, 7]);
+
+    // print ave
+    function six(arr){
+      var sum = 0;
+      for(var i=0; i<arr.length; i++){
+        sum = sum + arr[i];
+      }
+      console.log(sum/arr.length);
+    }
+    // six([1, 55, 2, 67, 7]);
+
+    // Array with Odds
+    function seven(){
+      var arr = [];
+      for(var i=1; i<=255; i=i+2){
+        arr.push(i);
+      }
+      console.log(arr);
+    }
+    // seven();
+
+    // Square the values
+    function eight(arr){
+      for(var i=0; i<arr.length; i++){
+        arr[i] = arr[i] * arr[i];
+      }
+      console.log(arr);
+    }
+    // eight([1, 55, 2, 67, 7]);
+
+    // Greater than Y
+    function nine(arr, y){
+      var count = 0;
+      for(var i=0; i<arr.length; i++){
+        if(arr[i]>y){
+          count++;
+        }
+      }
+      console.log(count);
+    }
+    // nine([1, 55, 2, 67, 7], 8);
+
+
+    // Zero out neg
+    function ten(arr){
+      for(var i=0; i<arr.length; i++){
+        if(arr[i]<0){
+          arr[i] = 0;
+        }
+      }
+      console.log(arr);
+    }
+    // ten([1, -55, 2, -67, 7], 8);
+
+
+    // min max ave
+    function eleven(arr){
+      var min = arr[0];
+      var max = arr[0];
+      var sum = arr[0];
+
+      for(var i=1;i<arr.length; i++){
+        if(arr[i]>max){
+          max = arr[i];
+        }
+        if(arr[i]<min){
+          min = arr[i];
+        }
+        sum = sum + arr[i];
+      }
+      console.log("min:"+min+" max:"+max+" ave:"+(sum/arr.length));
+    }
+    // eleven([3, 6, 5, 10]);
+
+    // Shift array values
+    function twelve(arr){
+      for(var i=0; i<arr.length; i++){
+        if(arr[i+1]){
+          arr[i] = arr[i+1];
+        }
+      }
+      arr[arr.length-1] = 0;
+      console.log(arr);
+    }
+    // twelve([3, 6, 5, 10]);
+    // [1,2,3]
+    // [2,3,0]
+
+
+    // Swap string with negative values
+    function thirteen(arr){
+      for(var i=0; i<arr.length; i++){
+        if(arr[i]<0){
+          arr[i] = "Dojo";
+        }
+      }
+      console.log(arr);
+    }
+    thirteen([3, -6, 5, 10]);
+
+
+
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
